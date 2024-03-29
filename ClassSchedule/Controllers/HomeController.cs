@@ -24,7 +24,7 @@ namespace ClassSchedule.Controllers
             else
             {
                 classOptions.Where = c => c.DayId == id;
-                classOptions.OrderBy = c => c.MilitaryTime;
+                classOptions.ThenOrderBy = c => c.MilitaryTime;
             }
 
             ViewBag.Days = _unitOfWork.Days.List(dayOptions);

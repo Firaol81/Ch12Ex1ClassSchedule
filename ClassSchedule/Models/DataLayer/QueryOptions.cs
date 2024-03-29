@@ -5,10 +5,10 @@ namespace ClassSchedule.Models
 {
     public class QueryOptions<T>
     {
-        public Expression<Func<T, object>> OrderBy { get; set; }
-        public Expression<Func<T, object>> ThenOrderBy { get; set; }
-        public Expression<Func<T, bool>> Where { get; set; }
-        private string[] _includes;
+        public Expression<Func<T, object>> OrderBy { get; set; } = null!;
+        public Expression<Func<T, object>> ThenOrderBy { get; set; } = null!;
+        public Expression<Func<T, bool>> Where { get; set; } = null!;
+        private string[] _includes = Array.Empty<string>();
 
         public string Includes
         {
